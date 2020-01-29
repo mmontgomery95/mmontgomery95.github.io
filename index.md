@@ -6,7 +6,7 @@ title: Home
 	<h1>Progress is happening</h1>
 	<p>Looking for literally anything to show up here. <br>
 		
-	<a href="cityXR/about">About</a>
+	<a href="https://mmontgomery95.github.io/about">About</a>
 	<br>	
 	<a href="/about">About2</a>
 	</p>
