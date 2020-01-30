@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Home
 ---
-<div class="blurb">
-	<h1>Progress is happening</h1>
-	<p>Looking for literally anything to show up here. <br>
-		
-	<a href="https://mmontgomery95.github.io/about">About</a>
-	<br>	
-	<a href="https://mmontgomery95.github.io/blog">Blog</a>
-	</p>
-</div><!-- /.blurb -->
+
+<ul>
+    {% for post in paginator.posts %}
+      <li>
+          <h2><a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">{{ post.title }}</a></h2>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+          <p>{{ post.content | strip_html | truncatewords:50 }}</p>
+      </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hacker-Blog</title>
+    <description>A Jekyll Blog Theme For Hackers</description>
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <author>
+      <name>SomeHacker</name>
+      <email>someone@somewebsite.somedomain</email>
+      <uri>https://ashishchaudhary.in/hacker-blog</uri>
+    </author>
+    
+      <item>
+        <title>Post number one</title>
+        <description>&lt;p&gt;This is where I’d put a post, if I had one, which I don’t, so I won’t.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 29 Jan 2020 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000//start</link>
+        <link href="http://localhost:4000/start"/>
+        <guid isPermaLink="true">http://localhost:4000/start</guid>
+      </item>
+    
+  </channel>
+</rss>
