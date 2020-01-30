@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/start</loc>
+<loc>/start</loc>
 <lastmod>2020-01-29T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/stp</loc>
+<loc>/stp</loc>
 <lastmod>2020-01-29T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/404</loc>
+<loc>/404</loc>
 </url>
 <url>
-<loc>http://localhost:4000/about</loc>
+<loc>/about</loc>
 </url>
 <url>
-<loc>http://localhost:4000/archive</loc>
+<loc>/archive</loc>
 </url>
 <url>
-<loc>http://localhost:4000/blog/</loc>
+<loc>/blog/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/about/</loc>
+<loc>/about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>/</loc>
 </url>
 </urlset>
