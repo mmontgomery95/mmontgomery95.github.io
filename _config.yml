@@ -1,2 +1,4 @@
 theme: jekyll-theme-modernist
 title: Personal Progress Blog
+
+permalink: /blog/:year/:month/:day/:title
