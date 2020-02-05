@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hacker-Blog</title>
-    <description>A Jekyll Blog Theme For Hackers</description>
+    <title>Personal Progress Blog</title>
+    <description>Tracking Professional and Educational Progress</description>
     <link></link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
     <author>
-      <name>SomeHacker</name>
-      <email>someone@somewebsite.somedomain</email>
-      <uri>https://ashishchaudhary.in/hacker-blog</uri>
+      <name>Morgan Montgomery</name>
+      <email>morgan.montgomery95@gmail.com</email>
+      <uri>https://mmontgomery95.github.io/</uri>
     </author>
     
       <item>
