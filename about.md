@@ -3,4 +3,14 @@ layout: page
 title: About
 ---
 
-Something about me.
+My name is Morgan Montgomery; I will be using this blog to track my progress 
+(as well as provide documentation for projects) as I learn and grow as a programmer. 
+Currently I have experience with Java, HTML, and CSS, and I'm working to add Python to that list 
+as well.
+
+
+Current goals:
+
+-  Complete a functional Python project
+-  Become proficient with Linux
+-  Dust off the CSS skills
