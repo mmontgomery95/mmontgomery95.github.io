@@ -3,8 +3,8 @@
   <channel>
     <title>Personal Progress Blog</title>
     <description>Tracking Professional and Educational Progress</description>
-    <link></link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4000</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     <author>
       <name>Morgan Montgomery</name>
       <email>morgan.montgomery95@gmail.com</email>
@@ -50,9 +50,9 @@ jekyll s
 &lt;p&gt;Next on the docket: visuals. The current beast of burden is attempting to change the theme that was initially set; the decision must be made whether to set an entirely new theme, or customize the CSS of the current theme to my liking.&lt;/p&gt;
 </description>
         <pubDate>Thu, 30 Jan 2020 00:00:00 -0600</pubDate>
-        <link>//stp</link>
-        <link href="/stp"/>
-        <guid isPermaLink="true">/stp</guid>
+        <link>http://localhost:4000//stp</link>
+        <link href="http://localhost:4000/stp"/>
+        <guid isPermaLink="true">http://localhost:4000/stp</guid>
       </item>
     
       <item>
@@ -60,9 +60,9 @@ jekyll s
         <description>&lt;p&gt;This is where I’d put a post, if I had one, which I don’t, so I won’t.&lt;/p&gt;
 </description>
         <pubDate>Wed, 29 Jan 2020 00:00:00 -0600</pubDate>
-        <link>//start</link>
-        <link href="/start"/>
-        <guid isPermaLink="true">/start</guid>
+        <link>http://localhost:4000//start</link>
+        <link href="http://localhost:4000/start"/>
+        <guid isPermaLink="true">http://localhost:4000/start</guid>
       </item>
     
   </channel>
