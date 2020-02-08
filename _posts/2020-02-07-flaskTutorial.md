@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building a Todo App with Flask in Python
-date: 2020-01-29
+date: 2020-02-7
 ---
 
 Step one: running python3 instead of python2.

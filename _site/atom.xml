@@ -12,6 +12,50 @@
     </author>
     
       <item>
+        <title>Building a Todo App with Flask in Python</title>
+        <description>&lt;p&gt;Step one: running python3 instead of python2.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias python=python3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Step one complete.&lt;/p&gt;
+
+&lt;p&gt;Next: Creating and cloning the git repository. Creating is straightforward; clone using following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo git clone https://github.com/USERNAME/REPONAME.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo grants permission to run the command&lt;/li&gt;
+  &lt;li&gt;URL retrieved from “clone repository” option in browser&lt;/li&gt;
+  &lt;li&gt;make sure correct directory is set before running command&lt;/li&gt;
+  &lt;li&gt;permissions must be set for directory before work is able to be done within it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Install Flask&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;“framework for Python to develop web applications”&lt;/li&gt;
+  &lt;li&gt;later: check out Django, potential alternative to Flask&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Done:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;can get a “Hello World” on server&lt;/li&gt;
+  &lt;li&gt;basic database created&lt;/li&gt;
+  &lt;li&gt;created function to establish connection w/ database &amp;amp; execute insert query&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Next:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;make first module run correctly. Syntax errors galore; not functioning even after copy/pasting code from site&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 07 Feb 2020 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000//flaskTutorial</link>
+        <link href="http://localhost:4000/flaskTutorial"/>
+        <guid isPermaLink="true">http://localhost:4000/flaskTutorial</guid>
+      </item>
+    
+      <item>
         <title>Publishing Changes to the Site</title>
         <description>&lt;p&gt;Minor documentation, mostly for my own purposes, of various commands used to create and publish changes to this site.&lt;/p&gt;
 
@@ -56,8 +100,42 @@ jekyll s
       </item>
     
       <item>
-        <title>Post number one</title>
-        <description>&lt;p&gt;This is where I’d put a post, if I had one, which I don’t, so I won’t.&lt;/p&gt;
+        <title>Building a Todo App with Flask in Python</title>
+        <description>&lt;p&gt;Step one: running python3 instead of python2.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias python=python3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Step one complete.&lt;/p&gt;
+
+&lt;p&gt;Next: Creating and cloning the git repository. Creating is straightforward; clone using following command:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo git clone https://github.com/USERNAME/REPONAME.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sudo grants permission to run the command&lt;/li&gt;
+  &lt;li&gt;URL retrieved from “clone repository” option in browser&lt;/li&gt;
+  &lt;li&gt;make sure correct directory is set before running command&lt;/li&gt;
+  &lt;li&gt;permissions must be set for directory before work is able to be done within it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Install Flask&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;“framework for Python to develop web applications”&lt;/li&gt;
+  &lt;li&gt;later: check out Django, potential alternative to Flask&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Done:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;can get a “Hello World” on server&lt;/li&gt;
+  &lt;li&gt;basic database created&lt;/li&gt;
+  &lt;li&gt;created function to establish connection w/ database &amp;amp; execute insert query&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Next:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;make first module run correctly. Syntax errors galore; not functioning even after copy/pasting code from site&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         <pubDate>Wed, 29 Jan 2020 00:00:00 -0600</pubDate>
         <link>http://localhost:4000//start</link>
