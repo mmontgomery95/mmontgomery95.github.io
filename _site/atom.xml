@@ -12,6 +12,48 @@
     </author>
     
       <item>
+        <title>Local Environments and Beautifulsoup</title>
+        <description>&lt;p&gt;&lt;strong&gt;Local Environments&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python3 -m venv my_env
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Creates a local programming environment&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source my_env/bin/activate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Activates and enters the local environment &lt;code class=&quot;highlighter-rouge&quot;&gt;my_env&lt;/code&gt;. From here, files can be written to execute code 
+as you would within any other compiler.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Beautifulsoup&lt;/strong&gt; is a program used for scraping webpages; using the &lt;code class=&quot;highlighter-rouge&quot;&gt;.find_all(ARG)&lt;/code&gt; command allows you 
+to search a webpage for every instance of an argument, such as &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;.
+Using this with the local environment allows the user to instantly pass arguments and receive results, making it much easier to search through a webpage.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 14 Feb 2020 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000//bsoup1</link>
+        <link href="http://localhost:4000/bsoup1"/>
+        <guid isPermaLink="true">http://localhost:4000/bsoup1</guid>
+      </item>
+    
+      <item>
+        <title>Converting an SQLite database to PostgreSQL</title>
+        <description>&lt;p&gt;Using the same base code/files, the Todo Flask app now works for PostgreSQL using pysopg2.&lt;/p&gt;
+
+&lt;p&gt;Key changes/differences:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Wrote a function to run a query, rather than writing the same few lines inside each function within the helper file&lt;/li&gt;
+  &lt;li&gt;String arguments must be indicated with &lt;code class=&quot;highlighter-rouge&quot;&gt;%s&lt;/code&gt;, whereas previously &lt;code class=&quot;highlighter-rouge&quot;&gt;?&lt;/code&gt; was used&lt;/li&gt;
+  &lt;li&gt;SQLite allowed for a simple path specification; psycopg2 needed a much more specific path laid out&lt;/li&gt;
+  &lt;li&gt;psycopg2 requires the connection to be closed when you’re finished with it&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most of the time on this project was spent debugging, as a majority of the code was already written and ready to go with the SQLite app- most, if not all, changes were done within the helper file. The major takeaway was to insert &lt;code class=&quot;highlighter-rouge&quot;&gt;print()&lt;/code&gt; lines throughout the code to determine where exactly the issues were, as the terminal didn’t always specify.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 12 Feb 2020 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000//postgres</link>
+        <link href="http://localhost:4000/postgres"/>
+        <guid isPermaLink="true">http://localhost:4000/postgres</guid>
+      </item>
+    
+      <item>
         <title>Building a Todo App with Flask in Python</title>
         <description>&lt;p&gt;Step one: running python3 instead of python2.&lt;/p&gt;
 
@@ -97,50 +139,6 @@ jekyll s
         <link>http://localhost:4000//stp</link>
         <link href="http://localhost:4000/stp"/>
         <guid isPermaLink="true">http://localhost:4000/stp</guid>
-      </item>
-    
-      <item>
-        <title>Building a Todo App with Flask in Python</title>
-        <description>&lt;p&gt;Step one: running python3 instead of python2.&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;alias python=python3
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Step one complete.&lt;/p&gt;
-
-&lt;p&gt;Next: Creating and cloning the git repository. Creating is straightforward; clone using following command:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo git clone https://github.com/USERNAME/REPONAME.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;sudo grants permission to run the command&lt;/li&gt;
-  &lt;li&gt;URL retrieved from “clone repository” option in browser&lt;/li&gt;
-  &lt;li&gt;make sure correct directory is set before running command&lt;/li&gt;
-  &lt;li&gt;permissions must be set for directory before work is able to be done within it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Install Flask&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;“framework for Python to develop web applications”&lt;/li&gt;
-  &lt;li&gt;later: check out Django, potential alternative to Flask&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Done:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;can get a “Hello World” on server&lt;/li&gt;
-  &lt;li&gt;basic database created&lt;/li&gt;
-  &lt;li&gt;created function to establish connection w/ database &amp;amp; execute insert query&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Next:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;make first module run correctly. Syntax errors galore; not functioning even after copy/pasting code from site&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Wed, 29 Jan 2020 00:00:00 -0600</pubDate>
-        <link>http://localhost:4000//start</link>
-        <link href="http://localhost:4000/start"/>
-        <guid isPermaLink="true">http://localhost:4000/start</guid>
       </item>
     
   </channel>

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/start</loc>
-<lastmod>2020-01-29T00:00:00-06:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/stp</loc>
 <lastmod>2020-01-30T00:00:00-06:00</lastmod>
 </url>
@@ -13,18 +9,29 @@
 <lastmod>2020-02-07T00:00:00-06:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/postgres</loc>
+<lastmod>2020-02-12T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/bsoup1</loc>
+<lastmod>2020-02-14T00:00:00-06:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/404</loc>
 </url>
 <url>
 <loc>http://localhost:4000/archive</loc>
 </url>
 <url>
-<loc>http://localhost:4000/blog/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/blog/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page/2/</loc>
 </url>
 </urlset>
