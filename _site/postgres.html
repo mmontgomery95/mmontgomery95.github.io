@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="generator" content="Jekyll">
+
+  <title>Converting an SQLite database to PostgreSQL</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Converting an SQLite database to PostgreSQL | Personal Progress Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Converting an SQLite database to PostgreSQL" />
+<meta name="author" content="Morgan Montgomery" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Using the same base code/files, the Todo Flask app now works for PostgreSQL using pysopg2." />
+<meta property="og:description" content="Using the same base code/files, the Todo Flask app now works for PostgreSQL using pysopg2." />
+<link rel="canonical" href="http://localhost:4000/postgres" />
+<meta property="og:url" content="http://localhost:4000/postgres" />
+<meta property="og:site_name" content="Personal Progress Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-12T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Using the same base code/files, the Todo Flask app now works for PostgreSQL using pysopg2.","author":{"@type":"Person","name":"Morgan Montgomery"},"@type":"BlogPosting","url":"http://localhost:4000/postgres","headline":"Converting an SQLite database to PostgreSQL","dateModified":"2020-02-12T00:00:00-06:00","datePublished":"2020-02-12T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/postgres"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>morgan@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/archive"><h2 class="header-link">Archive</h2></a>
+<a href="/about"><h2 class="header-link">About</h2></a>
+<a href="/atom.xml"><h2 class="header-link">RSS</h2></a>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Converting an SQLite database to PostgreSQL</h2>
+  <time datetime="2020-02-12T00:00:00-06:00" class="by-line">12 Feb 2020</time>
+  <p>Using the same base code/files, the Todo Flask app now works for PostgreSQL using pysopg2.</p>
+
+<p>Key changes/differences:</p>
+<ul>
+  <li>Wrote a function to run a query, rather than writing the same few lines inside each function within the helper file</li>
+  <li>String arguments must be indicated with <code class="highlighter-rouge">%s</code>, whereas previously <code class="highlighter-rouge">?</code> was used</li>
+  <li>SQLite allowed for a simple path specification; psycopg2 needed a much more specific path laid out</li>
+  <li>psycopg2 requires the connection to be closed when you’re finished with it</li>
+</ul>
+
+<p>Most of the time on this project was spent debugging, as a majority of the code was already written and ready to go with the SQLite app- most, if not all, changes were done within the helper file. The major takeaway was to insert <code class="highlighter-rouge">print()</code> lines throughout the code to determine where exactly the issues were, as the terminal didn’t always specify.</p>
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Morgan Montgomery</b>
+    </span>
+    
+    <span>© 2020</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

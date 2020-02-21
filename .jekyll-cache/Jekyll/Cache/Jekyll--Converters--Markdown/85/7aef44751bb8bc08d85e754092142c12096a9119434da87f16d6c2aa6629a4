@@ -1,0 +1,19 @@
+I"ú<p><strong>Local Environments</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 -m venv my_env
+</code></pre></div></div>
+<p>Creates a local programming environment</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source my_env/bin/activate
+</code></pre></div></div>
+<p>Activates and enters the local environment <code class="highlighter-rouge">my_env</code>. From here, files can be written to execute code 
+as you would within any other compiler.</p>
+
+<p><strong>Beautifulsoup</strong> is a program used for scraping webpages; using the <code class="highlighter-rouge">.find_all(ARG)</code> command allows you 
+to search a webpage for every instance of an argument, such as <code class="highlighter-rouge">&lt;p&gt;</code>, <code class="highlighter-rouge">class</code>, and <code class="highlighter-rouge">id</code>.
+Using this with the local environment allows the user to instantly pass arguments and receive results, making it much easier to search through a webpage.</p>
+
+<p>Webscraping is at its core an organizational logic puzzle; getting desired results means finding within a pageâ€™s source code each unique tag to narrow down where the target information is located. Depending on the amount of information desired, and the layout of the page, this could mean any number of nested tags before reaching the actual data.</p>
+
+<p>Once the correct data is received, it then is formatted to be displayed. For my purposes, I put my data into a .csv file. In my sample .csv, I took a webpage with a list of Texas counties. Once I pared down the retrieved data to contain only the string with the county name, county seat, and link to information, I separated out the string using <code class="highlighter-rouge">split(",")</code> to separate into multiple strings wherever a comma was, and then <code class="highlighter-rouge">strip()</code> to remove whitespace. This gave me the ability to pull multiple data points from a single string.</p>
+
+:ET

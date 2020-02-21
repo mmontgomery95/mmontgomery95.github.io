@@ -26,6 +26,11 @@ as you would within any other compiler.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Beautifulsoup&lt;/strong&gt; is a program used for scraping webpages; using the &lt;code class=&quot;highlighter-rouge&quot;&gt;.find_all(ARG)&lt;/code&gt; command allows you 
 to search a webpage for every instance of an argument, such as &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;p&amp;gt;&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;class&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;.
 Using this with the local environment allows the user to instantly pass arguments and receive results, making it much easier to search through a webpage.&lt;/p&gt;
+
+&lt;p&gt;Webscraping is at its core an organizational logic puzzle; getting desired results means finding within a page’s source code each unique tag to narrow down where the target information is located. Depending on the amount of information desired, and the layout of the page, this could mean any number of nested tags before reaching the actual data.&lt;/p&gt;
+
+&lt;p&gt;Once the correct data is received, it then is formatted to be displayed. For my purposes, I put my data into a .csv file. In my sample .csv, I took a webpage with a list of Texas counties. Once I pared down the retrieved data to contain only the string with the county name, county seat, and link to information, I separated out the string using &lt;code class=&quot;highlighter-rouge&quot;&gt;split(&quot;,&quot;)&lt;/code&gt; to separate into multiple strings wherever a comma was, and then &lt;code class=&quot;highlighter-rouge&quot;&gt;strip()&lt;/code&gt; to remove whitespace. This gave me the ability to pull multiple data points from a single string.&lt;/p&gt;
+
 </description>
         <pubDate>Fri, 14 Feb 2020 00:00:00 -0600</pubDate>
         <link>http://localhost:4000//bsoup1</link>

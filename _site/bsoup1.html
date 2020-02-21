@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="generator" content="Jekyll">
+
+  <title>Local Environments and Beautifulsoup</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Local Environments and Beautifulsoup | Personal Progress Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Local Environments and Beautifulsoup" />
+<meta name="author" content="Morgan Montgomery" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Local Environments python3 -m venv my_env Creates a local programming environment" />
+<meta property="og:description" content="Local Environments python3 -m venv my_env Creates a local programming environment" />
+<link rel="canonical" href="http://localhost:4000/bsoup1" />
+<meta property="og:url" content="http://localhost:4000/bsoup1" />
+<meta property="og:site_name" content="Personal Progress Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-14T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Local Environments python3 -m venv my_env Creates a local programming environment","author":{"@type":"Person","name":"Morgan Montgomery"},"@type":"BlogPosting","url":"http://localhost:4000/bsoup1","headline":"Local Environments and Beautifulsoup","dateModified":"2020-02-14T00:00:00-06:00","datePublished":"2020-02-14T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/bsoup1"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>morgan@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/archive"><h2 class="header-link">Archive</h2></a>
+<a href="/about"><h2 class="header-link">About</h2></a>
+<a href="/atom.xml"><h2 class="header-link">RSS</h2></a>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Local Environments and Beautifulsoup</h2>
+  <time datetime="2020-02-14T00:00:00-06:00" class="by-line">14 Feb 2020</time>
+  <p><strong>Local Environments</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 -m venv my_env
+</code></pre></div></div>
+<p>Creates a local programming environment</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>source my_env/bin/activate
+</code></pre></div></div>
+<p>Activates and enters the local environment <code class="highlighter-rouge">my_env</code>. From here, files can be written to execute code 
+as you would within any other compiler.</p>
+
+<p><strong>Beautifulsoup</strong> is a program used for scraping webpages; using the <code class="highlighter-rouge">.find_all(ARG)</code> command allows you 
+to search a webpage for every instance of an argument, such as <code class="highlighter-rouge">&lt;p&gt;</code>, <code class="highlighter-rouge">class</code>, and <code class="highlighter-rouge">id</code>.
+Using this with the local environment allows the user to instantly pass arguments and receive results, making it much easier to search through a webpage.</p>
+
+<p>Webscraping is at its core an organizational logic puzzle; getting desired results means finding within a page’s source code each unique tag to narrow down where the target information is located. Depending on the amount of information desired, and the layout of the page, this could mean any number of nested tags before reaching the actual data.</p>
+
+<p>Once the correct data is received, it then is formatted to be displayed. For my purposes, I put my data into a .csv file. In my sample .csv, I took a webpage with a list of Texas counties. Once I pared down the retrieved data to contain only the string with the county name, county seat, and link to information, I separated out the string using <code class="highlighter-rouge">split(",")</code> to separate into multiple strings wherever a comma was, and then <code class="highlighter-rouge">strip()</code> to remove whitespace. This gave me the ability to pull multiple data points from a single string.</p>
+
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Morgan Montgomery</b>
+    </span>
+    
+    <span>© 2020</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

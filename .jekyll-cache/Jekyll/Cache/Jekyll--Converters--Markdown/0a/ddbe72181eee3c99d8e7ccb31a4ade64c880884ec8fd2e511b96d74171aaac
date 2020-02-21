@@ -1,0 +1,5 @@
+I"Þ<p><strong>Local Environments</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python3 -m venv my_env
+</code></pre></div></div>
+<p>Creates a local programming environment</p>
+:ET

@@ -1,0 +1,36 @@
+I"Š<p>Minor documentation, mostly for my own purposes, of various commands used to create and publish changes to this site.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build
+jekyll b
+</code></pre></div></div>
+<ul>
+  <li>Builds my site</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll serve
+jekyll s
+</code></pre></div></div>
+<ul>
+  <li>Builds site for local viewing; preview what changes will look like without actually publishing</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git status
+</code></pre></div></div>
+<ul>
+  <li>Shows the files which have been changed but not yet committed to github</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git commit -a -m
+</code></pre></div></div>
+<ul>
+  <li>Commits files to the repository, with message for documentation</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git push
+</code></pre></div></div>
+<ul>
+  <li>Send local changes in current branch to its remote counterpart</li>
+</ul>
+
+<p>Next on the docket: visuals. The current beast of burden is attempting to change the theme that was initially set; the decision must be made whether to set an entirely new theme, or customize the CSS of the current theme to my liking.</p>
+:ET

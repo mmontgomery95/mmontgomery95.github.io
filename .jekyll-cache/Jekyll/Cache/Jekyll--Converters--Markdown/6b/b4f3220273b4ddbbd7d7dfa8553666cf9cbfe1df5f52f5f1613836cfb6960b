@@ -1,0 +1,36 @@
+I"<p>Step one: running python3 instead of python2.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>alias python=python3
+</code></pre></div></div>
+<p>Step one complete.</p>
+
+<p>Next: Creating and cloning the git repository. Creating is straightforward; clone using following command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo git clone https://github.com/USERNAME/REPONAME.git
+</code></pre></div></div>
+
+<ul>
+  <li>sudo grants permission to run the command</li>
+  <li>URL retrieved from “clone repository” option in browser</li>
+  <li>make sure correct directory is set before running command</li>
+  <li>permissions must be set for directory before work is able to be done within it</li>
+</ul>
+
+<p>Install Flask</p>
+<ul>
+  <li>“framework for Python to develop web applications”</li>
+  <li>later: check out Django, potential alternative to Flask</li>
+</ul>
+
+<p>Done:</p>
+<ul>
+  <li>can get a “Hello World” on server</li>
+  <li>basic database created</li>
+  <li>created function to establish connection w/ database &amp; execute insert query</li>
+</ul>
+
+<p>Next:</p>
+<ul>
+  <li>make first module run correctly. Syntax errors galore; not functioning even after copy/pasting code from site</li>
+</ul>
+:ET
