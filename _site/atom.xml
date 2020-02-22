@@ -12,6 +12,48 @@
     </author>
     
       <item>
+        <title>Creating a Project Landing Page - in progress</title>
+        <description>&lt;p&gt;Building a landing page using Bootstrap4. Starting with template from the &lt;a href=&quot;https://getbootstrap.com/docs/4.4/getting-started/introduction/&quot;&gt;Bootstrap&lt;/a&gt; website. This is mostly a refresher, but it’s been a long time since I’ve touched any of this. Most customization options are documented on the Bootstrap site for convenience.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Creating a Navigation Bar&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Define the &lt;code class=&quot;highlighter-rouge&quot;&gt;nav class&lt;/code&gt;, specify what your buttons will look like; create &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;div&amp;gt;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;ul&amp;gt;&lt;/code&gt; classes within each other to hold your list of links. Each link within the navbar is its own item.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;The Jumbotron&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Section named &lt;code class=&quot;highlighter-rouge&quot;&gt;top&lt;/code&gt; for nav purposes. Contains page title, minor descriptive flavor text, important links (like where to get a product).&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Sections&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Each block of the page is contained within a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;section&amp;gt;&lt;/code&gt;. Each section gets a class for navigation purposes.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;something else i guess&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Things to come back to&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Items that were covered, but didn’t pertain to the project:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Trailer&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Fri, 21 Feb 2020 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000//landingPage</link>
+        <link href="http://localhost:4000/landingPage"/>
+        <guid isPermaLink="true">http://localhost:4000/landingPage</guid>
+      </item>
+    
+      <item>
         <title>Local Environments and Beautifulsoup</title>
         <description>&lt;p&gt;&lt;strong&gt;Local Environments&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python3 -m venv my_env
