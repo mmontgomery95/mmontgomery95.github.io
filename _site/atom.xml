@@ -12,6 +12,45 @@
     </author>
     
       <item>
+        <title>Stuck in a Ubuntu Login Loop</title>
+        <description>&lt;p&gt;Ubuntu apparently has a known bug throughout various versions of sticking people in a login loop, wherein the incorrect password is objected to but a correct password loops back to the user-select screen. The immediate answer, according to most sources, is that &lt;code class=&quot;highlighter-rouge&quot;&gt;Xauthority&lt;/code&gt;, a graphics file, has an incorrect user/permission set.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;from login screen, go into terminal with &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl + alt + f2&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;check permissions with &lt;code class=&quot;highlighter-rouge&quot;&gt;ls -lah | grep -i Xauthority&lt;/code&gt; (specific flags to look for the hidden file)&lt;/li&gt;
+  &lt;li&gt;if owner is &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt;, change it to the user&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Next most likely culprit is the &lt;code class=&quot;highlighter-rouge&quot;&gt;.tmp&lt;/code&gt; file&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;from terminal, enter &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo ls -lah /tmp&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;permissions for &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt; should be &lt;code class=&quot;highlighter-rouge&quot;&gt;drwxrwxrwt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Neither of those worked for my situation. TIL there’s a problem with auto-login on Ubuntu 19.10, which requires the user to update Grub options.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Reboot into &lt;code class=&quot;highlighter-rouge&quot;&gt;recovery mode&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Select &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mount -o rw,remount /           # get write permission
+sudo nano /etc/default/grub     # edit grub options
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;remove the word “splash” from the &lt;code class=&quot;highlighter-rouge&quot;&gt;GRUB_CMDLINE_LINUX_DEFAULT&lt;/code&gt; line&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo update-grub&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Rebooted, got in, turned off auto login, supposedly everything works again. Keeping fingers crossed.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Feb 2020 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000//loginLoop</link>
+        <link href="http://localhost:4000/loginLoop"/>
+        <guid isPermaLink="true">http://localhost:4000/loginLoop</guid>
+      </item>
+    
+      <item>
         <title>Creating a Project Landing Page - in progress</title>
         <description>&lt;p&gt;Building a landing page using Bootstrap4. Starting with template from the &lt;a href=&quot;https://getbootstrap.com/docs/4.4/getting-started/introduction/&quot;&gt;Bootstrap&lt;/a&gt; website. This is mostly a refresher, but it’s been a long time since I’ve touched any of this. Most customization options are documented on the Bootstrap site for convenience.&lt;/p&gt;
 
@@ -23,15 +62,27 @@
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;strong&gt;The Jumbotron&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Section named &lt;code class=&quot;highlighter-rouge&quot;&gt;top&lt;/code&gt; for nav purposes. Contains page title, minor descriptive flavor text, important links (like where to get a product).&lt;/p&gt;
-
-&lt;hr /&gt;
-
 &lt;p&gt;&lt;strong&gt;Sections&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Each block of the page is contained within a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;section&amp;gt;&lt;/code&gt;. Each section gets a class for navigation purposes.&lt;/p&gt;
+&lt;p&gt;Each block of the page is contained within a &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;section&amp;gt;&lt;/code&gt;. Each section gets a class for navigation purposes. Sections used for this project include jumbotron, description, features&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Jumbotron&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;top&lt;/code&gt; in navigation&lt;/li&gt;
+  &lt;li&gt;Contains page title, descriptive flavor text, and important links&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;What is this project?&lt;/li&gt;
+  &lt;li&gt;Overview of what the project is and does&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Features&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Contains a few key features of the product&lt;/li&gt;
+  &lt;li&gt;Each feature contains a &lt;em&gt;read more&lt;/em&gt; to keep the page clean&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;hr /&gt;
 
@@ -44,6 +95,10 @@
 &lt;p&gt;Items that were covered, but didn’t pertain to the project:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Trailer&lt;/li&gt;
+  &lt;li&gt;Showcase&lt;/li&gt;
+  &lt;li&gt;Pricing&lt;/li&gt;
+  &lt;li&gt;Reviews&lt;/li&gt;
+  &lt;li&gt;Newsletter Sign-up&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>

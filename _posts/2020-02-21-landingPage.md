@@ -14,15 +14,22 @@ Define the `nav class`, specify what your buttons will look like; create `<div>`
 
 ---
 
-**The Jumbotron**
-
-Section named `top` for nav purposes. Contains page title, minor descriptive flavor text, important links (like where to get a product).
-
----
-
 **Sections**
 
-Each block of the page is contained within a `<section>`. Each section gets a class for navigation purposes. 
+Each block of the page is contained within a `<section>`. Each section gets a class for navigation purposes. Sections used for this project include jumbotron, description, features
+
+**Jumbotron**
+-   `top` in navigation
+-   Contains page title, descriptive flavor text, and important links
+
+**Description**
+-   What is this project?
+-   Overview of what the project is and does
+
+**Features**
+-   Contains a few key features of the product
+-   Each feature contains a _read more_ to keep the page clean
+
 
 ---
 
@@ -34,5 +41,9 @@ Each block of the page is contained within a `<section>`. Each section gets a cl
 
 Items that were covered, but didn't pertain to the project:
 -   Trailer
+-   Showcase
+-   Pricing
+-   Reviews
+-   Newsletter Sign-up
 
 
