@@ -86,19 +86,27 @@ sudo nano /etc/default/grub     # edit grub options
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;strong&gt;something else i guess&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cards&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Each card uses a very large block of code&lt;/li&gt;
+  &lt;li&gt;Looks nice, handy, but hard to find anything within the code&lt;/li&gt;
+  &lt;li&gt;Great for short lists (i.e. pricing info)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Beyond that point, most additions were cosmetic and CSS-based.&lt;/p&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;Things to come back to&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Items that were covered, but didn’t pertain to the project:&lt;/p&gt;
+&lt;p&gt;Items that were covered in the tutorials used, but didn’t pertain to the project:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Trailer&lt;/li&gt;
-  &lt;li&gt;Showcase&lt;/li&gt;
-  &lt;li&gt;Pricing&lt;/li&gt;
-  &lt;li&gt;Reviews&lt;/li&gt;
-  &lt;li&gt;Newsletter Sign-up&lt;/li&gt;
+  &lt;li&gt;Adding videos&lt;/li&gt;
+  &lt;li&gt;Carousel&lt;/li&gt;
+  &lt;li&gt;Review blurbs&lt;/li&gt;
+  &lt;li&gt;User input (i.e. newsletters)
+I’d like to come back to these when I have free time to put together one large website project for the sake of knowing how to do these things.&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>

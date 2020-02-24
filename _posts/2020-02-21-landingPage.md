@@ -33,17 +33,25 @@ Each block of the page is contained within a `<section>`. Each section gets a cl
 
 ---
 
-**something else i guess**
+**Cards**
+
+-   Each card uses a very large block of code
+-   Looks nice, handy, but hard to find anything within the code
+-   Great for short lists (i.e. pricing info)
+
+
+
+Beyond that point, most additions were cosmetic and CSS-based.
 
 ---
 
 **Things to come back to**
 
-Items that were covered, but didn't pertain to the project:
--   Trailer
--   Showcase
--   Pricing
--   Reviews
--   Newsletter Sign-up
+Items that were covered in the tutorials used, but didn't pertain to the project:
+-   Adding videos
+-   Carousel
+-   Review blurbs
+-   User input (i.e. newsletters)
+I'd like to come back to these when I have free time to put together one large website project for the sake of knowing how to do these things.
 
 

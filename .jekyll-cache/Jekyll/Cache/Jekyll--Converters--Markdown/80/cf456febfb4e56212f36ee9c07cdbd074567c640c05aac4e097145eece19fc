@@ -1,0 +1,58 @@
+I"�<p>Building a landing page using Bootstrap4. Starting with template from the <a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/">Bootstrap</a> website. This is mostly a refresher, but it’s been a long time since I’ve touched any of this. Most customization options are documented on the Bootstrap site for convenience.</p>
+
+<hr />
+
+<p><strong>Creating a Navigation Bar</strong></p>
+
+<p>Define the <code class="highlighter-rouge">nav class</code>, specify what your buttons will look like; create <code class="highlighter-rouge">&lt;div&gt;</code> and <code class="highlighter-rouge">&lt;ul&gt;</code> classes within each other to hold your list of links. Each link within the navbar is its own item.</p>
+
+<hr />
+
+<p><strong>Sections</strong></p>
+
+<p>Each block of the page is contained within a <code class="highlighter-rouge">&lt;section&gt;</code>. Each section gets a class for navigation purposes. Sections used for this project include jumbotron, description, features</p>
+
+<p><strong>Jumbotron</strong></p>
+<ul>
+  <li><code class="highlighter-rouge">top</code> in navigation</li>
+  <li>Contains page title, descriptive flavor text, and important links</li>
+</ul>
+
+<p><strong>Description</strong></p>
+<ul>
+  <li>What is this project?</li>
+  <li>Overview of what the project is and does</li>
+</ul>
+
+<p><strong>Features</strong></p>
+<ul>
+  <li>Contains a few key features of the product</li>
+  <li>Each feature contains a <em>read more</em> to keep the page clean</li>
+</ul>
+
+<hr />
+
+<p><strong>Cards</strong></p>
+
+<ul>
+  <li>Each card uses a very large block of code</li>
+  <li>Looks nice, handy, but hard to find anything within the code</li>
+  <li>Great for short lists (i.e. pricing info)</li>
+</ul>
+
+<p>Beyond that point, most additions were cosmetic and CSS-based.</p>
+
+<hr />
+
+<p><strong>Things to come back to</strong></p>
+
+<p>Items that were covered in the tutorials used, but didn’t pertain to the project:</p>
+<ul>
+  <li>Adding videos</li>
+  <li>Carousel</li>
+  <li>Review blurbs</li>
+  <li>User input (i.e. newsletters)
+I’d like to come back to these when I have free time to put together one large website project for the sake of knowing how to do these things.</li>
+</ul>
+
+:ET

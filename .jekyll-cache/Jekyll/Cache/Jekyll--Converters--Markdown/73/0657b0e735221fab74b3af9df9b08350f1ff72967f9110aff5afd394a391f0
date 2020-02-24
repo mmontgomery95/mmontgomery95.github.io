@@ -1,0 +1,2 @@
+I"w<p>Ubuntu apparently has a known bug throughout various versions of sticking people in a login loop, wherein the incorrect password is objected to but a correct password loops back to the user-select screen. The immediate answer, according to most sources, is that <code class="highlighter-rouge">Xauthority</code>, a graphics file, has an incorrect user/permission set.</p>
+:ET
