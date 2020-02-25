@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating a Project Landing Page - in progress
+title: Creating a Project Landing Page
 date: 2020-02-21
 ---
 
