@@ -12,6 +12,58 @@
     </author>
     
       <item>
+        <title>Plugins  -   IN PROGRESS</title>
+        <description>&lt;p&gt;Making sense of the currently created plugins for this project.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Files&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;function: &lt;em&gt;???&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;empty???&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;data_source.py&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;creates &lt;code class=&quot;highlighter-rouge&quot;&gt;Datasource&lt;/code&gt; class containing following functions: &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;migrate&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;create&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;clean&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;persist&lt;/code&gt;; does not define these functions&lt;/li&gt;
+  &lt;li&gt;class is imported in following plugin files to create various data sources (file, HTTP, web)&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;difference between http and web???&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;file_data_source.py&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;http_data_source.py&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;web_data_source.py&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;creates class which calls super().&lt;strong&gt;init&lt;/strong&gt;() to unknown results&lt;/li&gt;
+  &lt;li&gt;context tells me each class creates the related data source, but not sure how&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;app.py&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Following logic, should call on these files; only calls &lt;code class=&quot;highlighter-rouge&quot;&gt;user_plugins&lt;/code&gt; file, which does not contain all plugins&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;How are the others reached???&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Tried to run file; received errors
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Traceback (most recent call last):
+  File &quot;app.py&quot;, line 15, in &amp;lt;module&amp;gt;
+DEBUG = env.bool(&quot;DEBUG&quot;)
+  File &quot;/home/mlmont/.asdf/installs/python/3.8.1/lib/python3.8/site-packages/environs/__init__.py&quot;, line 74, in method
+raise EnvValidationError('Environment variable &quot;{}&quot; not set'.format(source_key), [message])
+environs.EnvValidationError: Environment variable &quot;DEBUG&quot; not set
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Key Terms&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt;    -   refers to the current instance of an object&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;super()&lt;/code&gt;   -   calls inherited methods from a parent or sibling class&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 27 Feb 2020 00:00:00 -0600</pubDate>
+        <link>http://localhost:4000//plugins</link>
+        <link href="http://localhost:4000/plugins"/>
+        <guid isPermaLink="true">http://localhost:4000/plugins</guid>
+      </item>
+    
+      <item>
         <title>Stuck in a Ubuntu Login Loop</title>
         <description>&lt;p&gt;Ubuntu apparently has a known bug throughout various versions of sticking people in a login loop, wherein the incorrect password is objected to but a correct password loops back to the user-select screen. The immediate answer, according to most sources, is that &lt;code class=&quot;highlighter-rouge&quot;&gt;Xauthority&lt;/code&gt;, a graphics file, has an incorrect user/permission set.&lt;/p&gt;
 
@@ -51,7 +103,7 @@ sudo nano /etc/default/grub     # edit grub options
       </item>
     
       <item>
-        <title>Creating a Project Landing Page - in progress</title>
+        <title>Creating a Project Landing Page</title>
         <description>&lt;p&gt;Building a landing page using Bootstrap4. Starting with template from the &lt;a href=&quot;https://getbootstrap.com/docs/4.4/getting-started/introduction/&quot;&gt;Bootstrap&lt;/a&gt; website. This is mostly a refresher, but it’s been a long time since I’ve touched any of this. Most customization options are documented on the Bootstrap site for convenience.&lt;/p&gt;
 
 &lt;hr /&gt;

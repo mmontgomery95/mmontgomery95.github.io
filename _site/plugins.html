@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="generator" content="Jekyll">
+
+  <title>Plugins  -   IN PROGRESS</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Plugins - IN PROGRESS | Personal Progress Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Plugins - IN PROGRESS" />
+<meta name="author" content="Morgan Montgomery" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Making sense of the currently created plugins for this project." />
+<meta property="og:description" content="Making sense of the currently created plugins for this project." />
+<link rel="canonical" href="http://localhost:4000/plugins" />
+<meta property="og:url" content="http://localhost:4000/plugins" />
+<meta property="og:site_name" content="Personal Progress Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-27T00:00:00-06:00" />
+<script type="application/ld+json">
+{"description":"Making sense of the currently created plugins for this project.","author":{"@type":"Person","name":"Morgan Montgomery"},"@type":"BlogPosting","url":"http://localhost:4000/plugins","headline":"Plugins - IN PROGRESS","dateModified":"2020-02-27T00:00:00-06:00","datePublished":"2020-02-27T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/plugins"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>morgan@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/archive"><h2 class="header-link">Archive</h2></a>
+<a href="/about"><h2 class="header-link">About</h2></a>
+<a href="/atom.xml"><h2 class="header-link">RSS</h2></a>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Plugins  -   IN PROGRESS</h2>
+  <time datetime="2020-02-27T00:00:00-06:00" class="by-line">27 Feb 2020</time>
+  <p>Making sense of the currently created plugins for this project.</p>
+
+<p><strong>Files</strong></p>
+
+<p><code class="highlighter-rouge">__init__.py</code></p>
+<ul>
+  <li>function: <em>???</em></li>
+  <li><em>empty???</em></li>
+</ul>
+
+<p><code class="highlighter-rouge">data_source.py</code></p>
+<ul>
+  <li>creates <code class="highlighter-rouge">Datasource</code> class containing following functions: <code class="highlighter-rouge">__init__</code>, <code class="highlighter-rouge">migrate</code>, <code class="highlighter-rouge">create</code>, <code class="highlighter-rouge">clean</code>, <code class="highlighter-rouge">persist</code>; does not define these functions</li>
+  <li>class is imported in following plugin files to create various data sources (file, HTTP, web)</li>
+  <li><em>difference between http and web???</em></li>
+</ul>
+
+<p><code class="highlighter-rouge">file_data_source.py</code>, <code class="highlighter-rouge">http_data_source.py</code>, <code class="highlighter-rouge">web_data_source.py</code></p>
+<ul>
+  <li>creates class which calls super().<strong>init</strong>() to unknown results</li>
+  <li>context tells me each class creates the related data source, but not sure how</li>
+</ul>
+
+<p><code class="highlighter-rouge">app.py</code></p>
+<ul>
+  <li>Following logic, should call on these files; only calls <code class="highlighter-rouge">user_plugins</code> file, which does not contain all plugins</li>
+  <li><em>How are the others reached???</em></li>
+  <li>Tried to run file; received errors
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traceback (most recent call last):
+  File "app.py", line 15, in &lt;module&gt;
+DEBUG = env.bool("DEBUG")
+  File "/home/mlmont/.asdf/installs/python/3.8.1/lib/python3.8/site-packages/environs/__init__.py", line 74, in method
+raise EnvValidationError('Environment variable "{}" not set'.format(source_key), [message])
+environs.EnvValidationError: Environment variable "DEBUG" not set
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Key Terms</strong></p>
+<ul>
+  <li><code class="highlighter-rouge">self</code>    -   refers to the current instance of an object</li>
+  <li><code class="highlighter-rouge">super()</code>   -   calls inherited methods from a parent or sibling class</li>
+</ul>
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Morgan Montgomery</b>
+    </span>
+    
+    <span>© 2020</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

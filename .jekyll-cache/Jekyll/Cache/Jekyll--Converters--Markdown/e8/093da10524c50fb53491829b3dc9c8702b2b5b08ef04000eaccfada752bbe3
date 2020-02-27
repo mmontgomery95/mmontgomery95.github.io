@@ -1,0 +1,44 @@
+I"	<p>Making sense of the currently created plugins for this project.</p>
+
+<p><strong>Files</strong></p>
+
+<p><code class="highlighter-rouge">__init__.py</code></p>
+<ul>
+  <li>function: <em>???</em></li>
+  <li><em>empty???</em></li>
+</ul>
+
+<p><code class="highlighter-rouge">data_source.py</code></p>
+<ul>
+  <li>creates <code class="highlighter-rouge">Datasource</code> class containing following functions: <code class="highlighter-rouge">__init__</code>, <code class="highlighter-rouge">migrate</code>, <code class="highlighter-rouge">create</code>, <code class="highlighter-rouge">clean</code>, <code class="highlighter-rouge">persist</code>; does not define these functions</li>
+  <li>class is imported in following plugin files to create various data sources (file, HTTP, web)</li>
+  <li><em>difference between http and web???</em></li>
+</ul>
+
+<p><code class="highlighter-rouge">file_data_source.py</code>, <code class="highlighter-rouge">http_data_source.py</code>, <code class="highlighter-rouge">web_data_source.py</code></p>
+<ul>
+  <li>creates class which calls super().<strong>init</strong>() to unknown results</li>
+  <li>context tells me each class creates the related data source, but not sure how</li>
+</ul>
+
+<p><code class="highlighter-rouge">app.py</code></p>
+<ul>
+  <li>Following logic, should call on these files; only calls <code class="highlighter-rouge">user_plugins</code> file, which does not contain all plugins</li>
+  <li><em>How are the others reached???</em></li>
+  <li>Tried to run file; received errors
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traceback (most recent call last):
+  File "app.py", line 15, in &lt;module&gt;
+DEBUG = env.bool("DEBUG")
+  File "/home/mlmont/.asdf/installs/python/3.8.1/lib/python3.8/site-packages/environs/__init__.py", line 74, in method
+raise EnvValidationError('Environment variable "{}" not set'.format(source_key), [message])
+environs.EnvValidationError: Environment variable "DEBUG" not set
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Key Terms</strong></p>
+<ul>
+  <li><code class="highlighter-rouge">self</code>    -   refers to the current instance of an object</li>
+  <li><code class="highlighter-rouge">super()</code>   -   calls inherited methods from a parent or sibling class</li>
+</ul>
+:ET
