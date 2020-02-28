@@ -1,4 +1,6 @@
-I"	<p>Making sense of the currently created plugins for this project.</p>
+I"�	<p>Making sense of the currently created plugins for this project.
+From there, implementing the <code class="highlighter-rouge">file_data_source</code> plugin (I believe).
+—</p>
 
 <p><strong>Files</strong></p>
 
@@ -6,6 +8,7 @@
 <ul>
   <li>function: <em>???</em></li>
   <li><em>empty???</em></li>
+  <li>Further investigation implies this will hold the plugin info as it runs, presumably from defining the function <code class="highlighter-rouge">__init__(self)</code>, likely the <code class="highlighter-rouge">super().__init__()</code> command within it. Will confirm.</li>
 </ul>
 
 <p><code class="highlighter-rouge">data_source.py</code></p>
@@ -17,23 +20,17 @@
 
 <p><code class="highlighter-rouge">file_data_source.py</code>, <code class="highlighter-rouge">http_data_source.py</code>, <code class="highlighter-rouge">web_data_source.py</code></p>
 <ul>
-  <li>creates class which calls super().<strong>init</strong>() to unknown results</li>
+  <li>creates class which calls <code class="highlighter-rouge">super().__init__()</code> to unknown results</li>
   <li>context tells me each class creates the related data source, but not sure how</li>
 </ul>
 
 <p><code class="highlighter-rouge">app.py</code></p>
 <ul>
-  <li>Following logic, should call on these files; only calls <code class="highlighter-rouge">user_plugins</code> file, which does not contain all plugins</li>
+  <li>Following logic, should call on these files; only calls <code class="highlighter-rouge">user_plugins</code> file, which does not contain all plugins <em>(possibly implementing others as we go?)</em></li>
+  <li>Creates <code class="highlighter-rouge">load_plugins</code> function</li>
   <li><em>How are the others reached???</em></li>
-  <li>Tried to run file; received errors
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Traceback (most recent call last):
-  File "app.py", line 15, in &lt;module&gt;
-DEBUG = env.bool("DEBUG")
-  File "/home/mlmont/.asdf/installs/python/3.8.1/lib/python3.8/site-packages/environs/__init__.py", line 74, in method
-raise EnvValidationError('Environment variable "{}" not set'.format(source_key), [message])
-environs.EnvValidationError: Environment variable "DEBUG" not set
-</code></pre></div>    </div>
-  </li>
+  <li>Tried to run file; received custom error message: “EnvValidationError: Environment variable “DEBUG” not set”</li>
+  <li>Running the file puts content into <code class="highlighter-rouge">__init__,py</code>; <em>how???</em></li>
 </ul>
 
 <p><strong>Key Terms</strong></p>
