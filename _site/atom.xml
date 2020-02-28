@@ -22,25 +22,22 @@ From there, implementing the &lt;code class=&quot;highlighter-rouge&quot;&gt;fil
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;function: &lt;em&gt;???&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;empty???&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Further investigation implies this will hold the plugin info as it runs, presumably from defining the function &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__(self)&lt;/code&gt;, likely the &lt;code class=&quot;highlighter-rouge&quot;&gt;super().__init__()&lt;/code&gt; command within it. Will confirm.&lt;/li&gt;
+  &lt;li&gt;Constructor which tells python that the directory is a module&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;data_source.py&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;creates &lt;code class=&quot;highlighter-rouge&quot;&gt;Datasource&lt;/code&gt; class containing following functions: &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;migrate&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;create&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;clean&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;persist&lt;/code&gt;; does not define these functions&lt;/li&gt;
+  &lt;li&gt;creates &lt;code class=&quot;highlighter-rouge&quot;&gt;Datasource&lt;/code&gt; class containing following functions: &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;migrate&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;create&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;clean&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;persist&lt;/code&gt;; currently stubs, will add methods later&lt;/li&gt;
   &lt;li&gt;class is imported in following plugin files to create various data sources (file, HTTP, web)&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;difference between http and web???&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;file_data_source.py&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;http_data_source.py&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;web_data_source.py&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;creates class which calls &lt;code class=&quot;highlighter-rouge&quot;&gt;super().__init__()&lt;/code&gt; to unknown results&lt;/li&gt;
+  &lt;li&gt;creates classes which call &lt;code class=&quot;highlighter-rouge&quot;&gt;super().__init__()&lt;/code&gt; - inherits methods from &lt;code class=&quot;highlighter-rouge&quot;&gt;constructor&lt;/code&gt; class&lt;/li&gt;
   &lt;li&gt;context tells me each class creates the related data source, but not sure how&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -48,19 +45,29 @@ From there, implementing the &lt;code class=&quot;highlighter-rouge&quot;&gt;fil
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;app.py&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Following logic, should call on these files; only calls &lt;code class=&quot;highlighter-rouge&quot;&gt;user_plugins&lt;/code&gt; file, which does not contain all plugins &lt;em&gt;(possibly implementing others as we go?)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Following logic, should call on these files; only calls &lt;code class=&quot;highlighter-rouge&quot;&gt;user_plugins&lt;/code&gt; directory, which does not contain all plugins &lt;em&gt;(possibly implementing others as we go?)&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Loops over &lt;code class=&quot;highlighter-rouge&quot;&gt;user_plugins&lt;/code&gt; directory, loads and evaluates them, then calls indicated method on them&lt;/li&gt;
   &lt;li&gt;Creates &lt;code class=&quot;highlighter-rouge&quot;&gt;load_plugins&lt;/code&gt; function&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;How are the others reached???&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;Tried to run file; received custom error message: “EnvValidationError: Environment variable “DEBUG” not set”&lt;/li&gt;
-  &lt;li&gt;Running the file puts content into &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__,py&lt;/code&gt;; &lt;em&gt;how???&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Running the program calls on &lt;code class=&quot;highlighter-rouge&quot;&gt;__init__.py&lt;/code&gt;, thereafter containing all relevant arguments&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;Key Terms&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt;    -   refers to the current instance of an object&lt;/li&gt;
+  &lt;li&gt;constructor -   special type of method used to initialize instance members of a class&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;self&lt;/code&gt;      -   refers to the current instance of an object&lt;/li&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;super()&lt;/code&gt;   -   calls inherited methods from a parent or sibling class&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;self.eager&lt;/code&gt;-   &lt;em&gt;???&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Questions&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;scripts within &lt;code class=&quot;highlighter-rouge&quot;&gt;/bin&lt;/code&gt; (i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;run_ingest&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Dockerfiles&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 27 Feb 2020 00:00:00 -0600</pubDate>

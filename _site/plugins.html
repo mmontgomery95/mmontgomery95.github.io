@@ -57,25 +57,22 @@ From there, implementing the <code class="highlighter-rouge">file_data_source</c
 
 <p><code class="highlighter-rouge">__init__.py</code></p>
 <ul>
-  <li>function: <em>???</em></li>
-  <li><em>empty???</em></li>
-  <li>Further investigation implies this will hold the plugin info as it runs, presumably from defining the function <code class="highlighter-rouge">__init__(self)</code>, likely the <code class="highlighter-rouge">super().__init__()</code> command within it. Will confirm.</li>
+  <li>Constructor which tells python that the directory is a module</li>
 </ul>
 
 <hr />
 
 <p><code class="highlighter-rouge">data_source.py</code></p>
 <ul>
-  <li>creates <code class="highlighter-rouge">Datasource</code> class containing following functions: <code class="highlighter-rouge">__init__</code>, <code class="highlighter-rouge">migrate</code>, <code class="highlighter-rouge">create</code>, <code class="highlighter-rouge">clean</code>, <code class="highlighter-rouge">persist</code>; does not define these functions</li>
+  <li>creates <code class="highlighter-rouge">Datasource</code> class containing following functions: <code class="highlighter-rouge">__init__</code>, <code class="highlighter-rouge">migrate</code>, <code class="highlighter-rouge">create</code>, <code class="highlighter-rouge">clean</code>, <code class="highlighter-rouge">persist</code>; currently stubs, will add methods later</li>
   <li>class is imported in following plugin files to create various data sources (file, HTTP, web)</li>
-  <li><em>difference between http and web???</em></li>
 </ul>
 
 <hr />
 
 <p><code class="highlighter-rouge">file_data_source.py</code>, <code class="highlighter-rouge">http_data_source.py</code>, <code class="highlighter-rouge">web_data_source.py</code></p>
 <ul>
-  <li>creates class which calls <code class="highlighter-rouge">super().__init__()</code> to unknown results</li>
+  <li>creates classes which call <code class="highlighter-rouge">super().__init__()</code> - inherits methods from <code class="highlighter-rouge">constructor</code> class</li>
   <li>context tells me each class creates the related data source, but not sure how</li>
 </ul>
 
@@ -83,19 +80,29 @@ From there, implementing the <code class="highlighter-rouge">file_data_source</c
 
 <p><code class="highlighter-rouge">app.py</code></p>
 <ul>
-  <li>Following logic, should call on these files; only calls <code class="highlighter-rouge">user_plugins</code> file, which does not contain all plugins <em>(possibly implementing others as we go?)</em></li>
+  <li>Following logic, should call on these files; only calls <code class="highlighter-rouge">user_plugins</code> directory, which does not contain all plugins <em>(possibly implementing others as we go?)</em></li>
+  <li>Loops over <code class="highlighter-rouge">user_plugins</code> directory, loads and evaluates them, then calls indicated method on them</li>
   <li>Creates <code class="highlighter-rouge">load_plugins</code> function</li>
-  <li><em>How are the others reached???</em></li>
   <li>Tried to run file; received custom error message: “EnvValidationError: Environment variable “DEBUG” not set”</li>
-  <li>Running the file puts content into <code class="highlighter-rouge">__init__,py</code>; <em>how???</em></li>
+  <li>Running the program calls on <code class="highlighter-rouge">__init__.py</code>, thereafter containing all relevant arguments</li>
 </ul>
 
 <hr />
 
 <p><strong>Key Terms</strong></p>
 <ul>
-  <li><code class="highlighter-rouge">self</code>    -   refers to the current instance of an object</li>
+  <li>constructor -   special type of method used to initialize instance members of a class</li>
+  <li><code class="highlighter-rouge">self</code>      -   refers to the current instance of an object</li>
   <li><code class="highlighter-rouge">super()</code>   -   calls inherited methods from a parent or sibling class</li>
+  <li><code class="highlighter-rouge">self.eager</code>-   <em>???</em></li>
+</ul>
+
+<hr />
+
+<p><strong><em>Questions</em></strong></p>
+<ul>
+  <li>scripts within <code class="highlighter-rouge">/bin</code> (i.e. <code class="highlighter-rouge">run_ingest</code>)</li>
+  <li>Dockerfiles</li>
 </ul>
 
 </article>
