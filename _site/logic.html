@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="generator" content="Jekyll">
+
+  <title>Data Source Class Logic</title>
+
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" /> <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Data Source Class Logic | Personal Progress Blog</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Data Source Class Logic" />
+<meta name="author" content="Morgan Montgomery" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Over this past weekend, we did a near complete rewrite of how we handle data sources. Previously, there was a single DataSource parent class from which we derived our three subclasses, each representing a different type of data, and then a plugin through which the user could implement their own data source and override our basic methods." />
+<meta property="og:description" content="Over this past weekend, we did a near complete rewrite of how we handle data sources. Previously, there was a single DataSource parent class from which we derived our three subclasses, each representing a different type of data, and then a plugin through which the user could implement their own data source and override our basic methods." />
+<link rel="canonical" href="http://localhost:4000/logic" />
+<meta property="og:url" content="http://localhost:4000/logic" />
+<meta property="og:site_name" content="Personal Progress Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-10T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"Over this past weekend, we did a near complete rewrite of how we handle data sources. Previously, there was a single DataSource parent class from which we derived our three subclasses, each representing a different type of data, and then a plugin through which the user could implement their own data source and override our basic methods.","author":{"@type":"Person","name":"Morgan Montgomery"},"@type":"BlogPosting","url":"http://localhost:4000/logic","headline":"Data Source Class Logic","dateModified":"2020-03-10T00:00:00-05:00","datePublished":"2020-03-10T00:00:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/logic"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header>
+  <div>
+    <a href="/">
+    
+    <h1>morgan@home:~$</h1>
+    </a>
+    <div class="header-links">
+      <a href="/archive"><h2 class="header-link">Archive</h2></a>
+<a href="/about"><h2 class="header-link">About</h2></a>
+<a href="/atom.xml"><h2 class="header-link">RSS</h2></a>
+    </div>
+  </div>
+</header>
+    <div class="container">
+      <section id="main_content">
+        <article>
+  <h2>Data Source Class Logic</h2>
+  <time datetime="2020-03-10T00:00:00-05:00" class="by-line">10 Mar 2020</time>
+  <p>Over this past weekend, we did a near complete rewrite of how we handle data sources. Previously, there was a single <code class="highlighter-rouge">DataSource</code> parent class from which we derived our three subclasses, each representing a different type of data, and then a plugin through which the user could implement their own data source and override our basic methods.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DataSource (baseclass) 
+    --&gt; WebDataSource (subclass for specific data type) 
+        --&gt; Plugin (contains user overrides)
+</code></pre></div></div>
+
+<p>Through this method, the base class would specify the vast majority of the logic. The subclass then inherits <code class="highlighter-rouge">abstractmethods</code> which tell the program what to do with the data source, and tweaks them to its own specifications, and from there the user receives them and alters them further to meet their needs (i.e. getting specified data from a webscrape).</p>
+
+<p>This method introduced several issues:</p>
+<ul>
+  <li>How do we inform the base class constructor of the user overrides?</li>
+  <li>Each function is implemented three times, each time more focused than the last</li>
+  <li>If the user needs to override the functions anyway, why implement the generalized functions at all, rather than just implementing the specific ones at the user end?</li>
+</ul>
+
+<p>It was overcomplicated, to put it simply. We only needed to do a handful of tasks: fetch the data, clean it up, and insert it into the database, and run all of that automatically on a schedule.</p>
+
+<p>We’ve now completely removed the tangle of classes, keeping only the base <code class="highlighter-rouge">DataSource</code> class. Methods are defined once within the user files; they can still be overridden as necessary, but serve as a base function to fall back on. Each data type on our end is now treated the same, and it will be up to the user to prepare that data to be collected, rather than build functions to identify the datasource and what to do with it.</p>
+
+</article>
+      </section>
+    </div>
+  </div>
+
+   <footer>
+  <a href="https://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
+    <span>
+        <b>Morgan Montgomery</b>
+    </span>
+    
+    <span>© 2020</span>
+  </a>
+</footer>
+
+  
+</body>
+
+</html>

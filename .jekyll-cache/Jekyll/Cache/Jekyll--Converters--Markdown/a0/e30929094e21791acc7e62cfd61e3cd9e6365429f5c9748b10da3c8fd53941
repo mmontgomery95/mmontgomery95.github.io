@@ -1,0 +1,20 @@
+I"P<p>Over this past weekend, we did a near complete rewrite of how we handle data sources. Previously, there was a single <code class="highlighter-rouge">DataSource</code> parent class from which we derived our three subclasses, each representing a different type of data, and then a plugin through which the user could implement their own data source and override our basic methods.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DataSource (baseclass) 
+    --&gt; WebDataSource (subclass for specific data type) 
+        --&gt; Plugin (contains user overrides)
+</code></pre></div></div>
+
+<p>Through this method, the base class would specify the vast majority of the logic. The subclass then inherits <code class="highlighter-rouge">abstractmethods</code> which tell the program what to do with the data source, and tweaks them to its own specifications, and from there the user receives them and alters them further to meet their needs (i.e. getting specified data from a webscrape).</p>
+
+<p>This method introduced several issues:</p>
+<ul>
+  <li>How do we inform the base class constructor of the user overrides?</li>
+  <li>Each function is implemented three times, each time more focused than the last</li>
+  <li>If the user needs to override the functions anyway, why implement the generalized functions at all, rather than just implementing the specific ones at the user end?</li>
+</ul>
+
+<p>It was overcomplicated, to put it simply. We only needed to do a handful of tasks: fetch the data, clean it up, and insert it into the database, and run all of that automatically on a schedule.</p>
+
+<p>The new method has completely removed the tangle of classes, keeping only the base <code class="highlighter-rouge">DataSource</code> class. Methods are defined once within the user files; they can still be overridden as necessary, but serve as a base function to fall back on. Each data type on our end is now treated the same, and it will be up to the user to prepare that data to be collected, rather than expand our end to figure out what the data source is and what to do with that.</p>
+:ET

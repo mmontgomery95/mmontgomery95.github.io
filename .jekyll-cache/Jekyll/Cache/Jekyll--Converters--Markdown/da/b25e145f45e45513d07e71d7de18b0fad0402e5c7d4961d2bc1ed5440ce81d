@@ -1,0 +1,11 @@
+I"’<p>Over this past weekend, we did a near complete rewrite of how we handle data sources. Previously, there was a single <code class="highlighter-rouge">DataSource</code> parent class from which we derived our three subclasses, each representing a different type of data, and then a plugin through which the user could implement their own data source and override our basic methods.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>DataSource (baseclass) 
+    --&gt; WebDataSource (subclass for specific data type) 
+        --&gt; Plugin (contains user overrides)
+</code></pre></div></div>
+
+<p>Through this method, the base class would specify the vast majority of the logic. The subclass then inherits <code class="highlighter-rouge">abstractmethods</code> which tell the program what to do with the data source, and tweaks them to its own specifications, and from there the user receives them and alters them further to meet their needs (i.e. getting specified data from a webscrape). The main problem faced here was how to then inform the base class constructor that these overrides existed and should be implemented. Beyond that, this method used three instances of each method, each more focused on itâ€™s specialized task than the last. It was overly complicated for relatively simple task - a function that operates on a schedule which receives data, cleans it, and inserts it into a database.</p>
+
+<p>The new method has completely removed the tangle of classes, keeping only the base <code class="highlighter-rouge">DataSource</code> class. Methods are defined once within the user files; they can still be overridden as necessary, but serve as a base function to fall back on. Each data type on our end is now treated the same, and it will be up to the user to prepare that data to be collected, rather than expand our end to figure out what the data source is and what to do with that.</p>
+:ET

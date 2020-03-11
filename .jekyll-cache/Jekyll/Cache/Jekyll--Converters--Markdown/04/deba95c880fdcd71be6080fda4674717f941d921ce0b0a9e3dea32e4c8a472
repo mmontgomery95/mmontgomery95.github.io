@@ -1,0 +1,2 @@
+I"‚<p>Over this past weekend, we did a near complete rewrite of how we handle data sources. Previously, there was a single <code class="highlighter-rouge">DataSource</code> parent class from which we derived our three subclasses, each representing a different type of data, and then a plugin through which the user could implement their own data source and override our basic methods.</p>
+:ET

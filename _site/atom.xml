@@ -12,6 +12,34 @@
     </author>
     
       <item>
+        <title>Data Source Class Logic</title>
+        <description>&lt;p&gt;Over this past weekend, we did a near complete rewrite of how we handle data sources. Previously, there was a single &lt;code class=&quot;highlighter-rouge&quot;&gt;DataSource&lt;/code&gt; parent class from which we derived our three subclasses, each representing a different type of data, and then a plugin through which the user could implement their own data source and override our basic methods.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;DataSource (baseclass) 
+    --&amp;gt; WebDataSource (subclass for specific data type) 
+        --&amp;gt; Plugin (contains user overrides)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Through this method, the base class would specify the vast majority of the logic. The subclass then inherits &lt;code class=&quot;highlighter-rouge&quot;&gt;abstractmethods&lt;/code&gt; which tell the program what to do with the data source, and tweaks them to its own specifications, and from there the user receives them and alters them further to meet their needs (i.e. getting specified data from a webscrape).&lt;/p&gt;
+
+&lt;p&gt;This method introduced several issues:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;How do we inform the base class constructor of the user overrides?&lt;/li&gt;
+  &lt;li&gt;Each function is implemented three times, each time more focused than the last&lt;/li&gt;
+  &lt;li&gt;If the user needs to override the functions anyway, why implement the generalized functions at all, rather than just implementing the specific ones at the user end?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It was overcomplicated, to put it simply. We only needed to do a handful of tasks: fetch the data, clean it up, and insert it into the database, and run all of that automatically on a schedule.&lt;/p&gt;
+
+&lt;p&gt;We’ve now completely removed the tangle of classes, keeping only the base &lt;code class=&quot;highlighter-rouge&quot;&gt;DataSource&lt;/code&gt; class. Methods are defined once within the user files; they can still be overridden as necessary, but serve as a base function to fall back on. Each data type on our end is now treated the same, and it will be up to the user to prepare that data to be collected, rather than build functions to identify the datasource and what to do with it.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 10 Mar 2020 00:00:00 -0500</pubDate>
+        <link>http://localhost:4000//logic</link>
+        <link href="http://localhost:4000/logic"/>
+        <guid isPermaLink="true">http://localhost:4000/logic</guid>
+      </item>
+    
+      <item>
         <title>Plugins  -   IN PROGRESS</title>
         <description>&lt;p&gt;Making sense of the currently created plugins for this project.
 From there, implementing the &lt;code class=&quot;highlighter-rouge&quot;&gt;file_data_source&lt;/code&gt; plugin (I believe).&lt;/p&gt;
