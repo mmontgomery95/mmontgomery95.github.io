@@ -1,4 +1,5 @@
-I"!<p>Making sense of the currently created plugins for this project.
+I"U
+<p>Making sense of the currently created plugins for this project.
 From there, implementing the <code class="highlighter-rouge">file_data_source</code> plugin (I believe).</p>
 
 <hr />
@@ -49,9 +50,4 @@ From there, implementing the <code class="highlighter-rouge">file_data_source</c
 
 <hr />
 
-<p><strong><em>Questions</em></strong></p>
-<ul>
-  <li>scripts within <code class="highlighter-rouge">/bin</code> (i.e. <code class="highlighter-rouge">run_ingest</code>)</li>
-  <li>Dockerfiles</li>
-</ul>
 :ET

@@ -1,0 +1,2 @@
+I"z<p>One of the fundamental pieces of the City XR project is the Database class. This class is essential in defining how the program interacts with its data by creating the database schemas - a new schema for each data source - and storing our data, as well as information about the data retrieval, within them. Each data source’s schema contains the following information:</p>
+:ET

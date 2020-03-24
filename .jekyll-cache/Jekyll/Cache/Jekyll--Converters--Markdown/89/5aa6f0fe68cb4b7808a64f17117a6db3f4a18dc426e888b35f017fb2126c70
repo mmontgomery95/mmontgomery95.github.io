@@ -1,0 +1,36 @@
+I"&<p>One of the fundamental pieces of the City XR project is the Database class. This class is essential in defining how the program interacts with its data by creating the database schemas - a new schema for each data source - and storing our data, as well as information about the data retrieval, within them. Each data source’s schema contains the following information:</p>
+
+<ul>
+  <li>Data source logs</li>
+  <li>Run history</li>
+  <li>Historical raw data intake</li>
+  <li>Current raw data intake</li>
+  <li>Historical cleaning information</li>
+  <li>Current cleaning information</li>
+</ul>
+
+<p>This provides the user with critical information as to the performance of a data source’s plugin such as how long it’s been actice, and rates of succesful and unsuccesful runs.</p>
+
+<p>Once the plugin has started running, the Database class starts working. It first checks to see if the data source has a schema created already; if not, it will create one. It also creates the <code class="highlighter-rouge">logs</code> and <code class="highlighter-rouge">runs</code> schemas.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Logs
+    id
+    time
+    severity
+    message
+    run
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Runs
+    id
+    started_at
+    ended_at
+    state
+</code></pre></div></div>
+
+<p>While the plugin runs, the Database class receives the newly retrieved data and gets to work creating tables in which to store it as it’s used. Four tables are used in this process. Data is received into the <code class="highlighter-rouge">Current Raw Data</code> table. From there the data will be cleaned up for use, and entered into the <code class="highlighter-rouge">Current Clean Data</code> table. The data in these tables will eventually be added to <code class="highlighter-rouge">Historical Raw Data</code> and <code class="highlighter-rouge">Historical Clean Data</code>, respectively. At the beginning of the next run, both Current tables will be emptied to receive the new data.</p>
+
+<p>The Database class is also responsible for updating the status of the run, through three functions: <code class="highlighter-rouge">begin_run</code>, beginning the run and providing the start time; <code class="highlighter-rouge">update_run</code>, providing status updates as the program runs; and <code class="highlighter-rouge">end_run</code>, completing the run and providing the end time as well as a final status update. This information is all collected within the Runs schema.</p>
+
+<p>Finally, the Database class is able to provide information about the run itself. Within the Logs schema, messages are stored related to the success of the program and anything the user might need to know, such as if the run failed and why.</p>
+:ET
